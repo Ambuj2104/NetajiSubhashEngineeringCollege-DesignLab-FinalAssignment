@@ -1,0 +1,39 @@
+<!--div>
+  <app-navbar></app-navbar>
+</div>-->
+
+<div class="alpha">
+  <br>
+  <br>
+  <button routerLink="">Logout</button> 
+</div>
+
+
+<div style="padding-bottom: 5%;">
+  <main>
+    <form (submit) = "onSubmit(titleForm)" #titleForm = "ngForm">
+      <button type="submit">Submit</button>
+      <div class=num></div>
+      <br>
+      <div>
+        <label for="name">Title of the blog</label><br>
+        <input type="text" label="name" name="title" ngModel placeholder="Focus the input and see the colors" #titleInput = "ngModel" required>
+      </div>      
+    </form>
+  </main>
+</div>
+
+<main>
+  <div>
+    <label for="name">Content</label>
+    <div class="quill-container">
+      <quill-editor class="content-editor" name="description"
+      placeholder=""
+      [(ngModel)]="content"
+       > </quill-editor>
+    </div>
+  </div>
+
+</main>
+
+
